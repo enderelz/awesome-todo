@@ -33,6 +33,10 @@ export async function loadTodos(): Promise<Todo[]> {
       return [];
     }
 
+    if (error instanceof SyntaxError) {
+      throw new Error(`Could not read ${storageFile}. Is it valid JSON?`);
+    }
+
     throw error;
   }
 }
