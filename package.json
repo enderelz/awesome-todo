@@ -1,0 +1,42 @@
+{
+  "name": "awesome-todo",
+  "version": "0.1.0",
+  "description": "A simple todo CLI.",
+  "homepage": "https://github.com/enderelz/awesome-todo#readme",
+  "bugs": {
+    "url": "https://github.com/enderelz/awesome-todo/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/enderelz/awesome-todo.git"
+  },
+  "license": "MIT",
+  "author": "enderelz",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build"
+  },
+  "bin": {
+    "todo": "dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "todo",
+    "cli",
+    "task",
+    "productivity",
+    "nodejs",
+    "typescript"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.4",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}
