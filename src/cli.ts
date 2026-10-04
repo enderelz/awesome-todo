@@ -1,13 +1,20 @@
 #!/usr/bin/env node
 
 import { createTodo, loadTodos, updateTodo, deleteTodo } from "./storage.js";
+import { createRequire } from "module";
 
+const { version } = createRequire(import.meta.url)("../package.json");
 const [command, ...args] = process.argv.slice(2);
 
 switch (command) {
   case "--help":
   case "-h":
     printHelp();
+    break;
+
+  case "--version":
+  case "-v":
+    console.log("Current version: " + version);
     break;
 
   case "add": {
